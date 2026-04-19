@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sultan Musk</title>
+  <!-- ✅ Primary SEO -->
+<meta name="description" content="Suul.in offers modern, stylish, and high-performance web solutions. Build stunning websites and grow your digital presence.">
+<meta name="keywords" content="suul, suul.in, web design, premium UI, responsive websites, digital solutions, modern design, bootstrap UI">
+<meta name="author" content="Suul.in">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://suul.in">
+
+<!-- ✅ Mobile Optimization -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d6efd">
+
+<!-- ✅ Open Graph (Facebook, WhatsApp) -->
+<meta property="og:title" content="Suul.in – Premium Digital Experience">
+<meta property="og:description" content="Create stunning, responsive, and modern websites with Suul.in. Elevate your digital presence.">
+<meta property="og:image" content="https://suul.in/user.jpg">
+<meta property="og:url" content="https://suul.in">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Suul.in">
+
+<!-- ✅ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Suul.in – Premium Web Solutions">
+<meta name="twitter:description" content="Build stylish and responsive websites with Suul.in.">
+<meta name="twitter:image" content="https://suul.in/user.jpg">
+
+<!-- ✅ Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- ✅ Basic Schema (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Suul.in",
+  "url": "https://suul.in",
+  "description": "Premium digital solutions and modern web experiences.",
+  "image": "https://suul.in/user.jpg",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://suul.in/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+  
+  
+  
+  
+  
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Rubik:wght@400;500;600;700&family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#000;
+  --text:#fff;
+  --muted:#aaa;
+  --primary:#2f6bff;
+  --btn:#e5e5e5;
+}
+
+
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:'Outfit', sans-serif;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+}
+
+
+body.light{
+  --bg:#f5f5f5;
+  --text:#111;
+  --muted:#666;
+  --primary:#2f6bff;
+  --btn:#e5e5e5;
+  font-family:'Rubik', sans-serif;
+}
+
+
+body.feminine{
+  --bg:#fff6f8;
+  --text:#2b2b2b;
+  --muted:#888;
+  --primary:#ff6fa5;
+  --btn:#ffe3ec;
+  font-family:'Poppins', sans-serif;
+}
+
+/* MAIN */
+.main{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+
+/* PROFILE IMAGE */
+.profile-img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:18px;
+  transition: filter 0.4s ease;
+}
+
+
+body:not(.light):not(.feminine) .profile-img{
+  filter: grayscale(100%) contrast(1.2) brightness(0.9);
+}
+
+
+body.light .profile-img{
+  filter:none;
+}
+
+
+body.feminine .profile-img{
+  filter:none;
+}
+
+/* TEXT */
+.name{
+  font-size:34px;
+  font-weight:490;
+  margin-bottom:4px;
+}
+
+body.feminine .name{
+  font-family:'Great Vibes', cursive;
+  font-size:40px;
+}
+
+.sub{
+  color:var(--muted);
+  margin-bottom:28px;
+  font-size:14px;
+}
+
+/* GRID */
+.icon-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px 18px;
+  max-width:520px;
+  width:100%;
+}
+
+/* CENTER FIX */
+.icon-link{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  justify-content:center;
+}
+
+.icon-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+/* ICON */
+.icon-circle{
+  width:68px;
+  height:68px;
+  background:var(--primary);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:#fff;
+  transition:0.3s;
+}
+
+.icon-link:hover .icon-circle{
+  transform:translateY(-5px) scale(1.05);
+}
+
+/* TEXT */
+.icon-text{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:8px;
+}
+
+/* CTA */
+.cta{
+  margin-top:38px;
+  background:var(--btn);
+  color:var(--primary);
+  border:none;
+  border-radius:60px;
+  width:100%;
+  max-width:420px;
+  padding:16px 0;
+  font-size:18px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.cta:hover{
+  transform:scale(1.03);
+}
+
+/* SWITCHER */
+.topbar{
+  position:absolute;
+  top:16px;
+  right:16px;
+}
+
+.theme-switcher{
+  display:flex;
+  gap:6px;
+  padding:6px;
+  border-radius:30px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.theme-btn{
+  border:none;
+  background:transparent;
+  color:var(--muted);
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.theme-btn.active{
+  background:var(--primary);
+  color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="theme-switcher">
+    <button class="theme-btn" data-theme=""><i class="bi bi-moon-fill"></i></button>
+    <button class="theme-btn" data-theme="light"><i class="bi bi-sun-fill"></i></button>
+    <button class="theme-btn" data-theme="feminine"><i class="bi bi-heart-fill"></i></button>
+  </div>
+</div>
+
+<div class="main">
+
+  <img src="user.jpg" class="profile-img" alt="Sultan Musk">
+
+  <div class="name">Sultan Musk</div>
+  <div class="sub">Dreamer & Designer</div>
+
+  <div class="icon-grid">
+
+    <a href="https://telegram.openinapp.co/b88mg" target="_blank" class="icon-link">
+      <div class="icon-item">
+        <div class="icon-circle"><i class="bi bi-telegram"></i></div>
+        <div class="icon-text">Telegram</div>
+      </div>
+    </a>
+
+    <a href="https://wa.openinapp.co/vll2d" target="_blank" class="icon-link">
+      <div class="icon-item">
+        <div class="icon-circle"><i class="bi bi-whatsapp"></i></div>
+        <div class="icon-text">WhatsApp</div>
+      </div>
+    </a>
+
+    <a href="https://insta.openinapp.co/ek4jk" target="_blank" class="icon-link">
+      <div class="icon-item">
+        <div class="icon-circle"><i class="bi bi-instagram"></i></div>
+        <div class="icon-text">Instagram</div>
+      </div>
+    </a>
+
+    <a href="tel:+919506969149" class="icon-link">
+      <div class="icon-item">
+        <div class="icon-circle"><i class="bi bi-telephone-fill"></i></div>
+        <div class="icon-text">Call</div>
+      </div>
+    </a>
+
+    <a href="sms:+919506969149" class="icon-link">
+      <div class="icon-item">
+        <div class="icon-circle"><i class="bi bi-chat-dots-fill"></i></div>
+        <div class="icon-text">Message</div>
+      </div>
+    </a>
+
+    <a href="mailto:Hi@suul.in" class="icon-link">
+      <div class="icon-item">
+        <div class="icon-circle"><i class="bi bi-envelope-fill"></i></div>
+        <div class="icon-text">Email</div>
+      </div>
+    </a>
+
+  </div>
+
+  <button class="cta" onclick="window.location.href='tel:+919506969149'">
+    Save Contact
+  </button>
+
+</div>
+
+<script>
+const buttons = document.querySelectorAll('.theme-btn');
+
+function setTheme(theme){
+  document.body.className = theme;
+  localStorage.setItem("theme", theme);
+
+  buttons.forEach(btn=>{
+    btn.classList.remove('active');
+    if(btn.dataset.theme === theme){
+      btn.classList.add('active');
+    }
+  });
+}
+
+buttons.forEach(btn=>{
+  btn.onclick = ()=> setTheme(btn.dataset.theme);
+});
+
+setTheme(localStorage.getItem("theme") || "");
+</script>
+
+</body>
+</html>
